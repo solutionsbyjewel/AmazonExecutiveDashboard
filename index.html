@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Amazon Executive Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Material Icons CDN -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="dashboard-container" id="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <span class="amazon-logo">a</span>
+        <span class="sidebar-title">Amazon</span>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li class="active"><span class="material-icons">dashboard</span>Dashboard</li>
+          <li><span class="material-icons">show_chart</span>Sales</li>
+          <li><span class="material-icons">local_shipping</span>Orders</li>
+          <li><span class="material-icons">inventory_2</span>Inventory</li>
+          <li><span class="material-icons">people</span>Customers</li>
+          <li><span class="material-icons">bar_chart</span>Reports</li>
+          <li><span class="material-icons">settings</span>Settings</li>
+        </ul>
+      </nav>
+      <button class="toggle-theme" id="themeToggle" title="Toggle light/dark mode">
+        <span class="material-icons">dark_mode</span>
+      </button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Header -->
+      <header class="main-header">
+        <div class="header-left">
+          <span class="amazon-logo large">a</span>
+          <h1>Amazon Executive Dashboard</h1>
+        </div>
+        <div class="header-right">
+          <span class="user-avatar">
+            <img src="https://i.pravatar.cc/40?img=12" alt="User Avatar">
+          </span>
+          <span class="user-name">Jeff Bezos</span>
+        </div>
+      </header>
+
+      <!-- Cards/Widgets -->
+      <section class="cards-grid">
+        <div class="card card-sales">
+          <div class="card-title">Total Sales Today</div>
+          <div class="card-value">
+            $1,245,000
+            <span class="trend up"><span class="material-icons">arrow_upward</span>2.4%</span>
+          </div>
+        </div>
+        <div class="card card-orders">
+          <div class="card-title">Orders Shipped</div>
+          <div class="card-value">8,320</div>
+          <div class="progress-bar">
+            <div class="progress" style="width: 83%"></div>
+          </div>
+        </div>
+        <div class="card card-prime">
+          <div class="card-title">Active Prime Users</div>
+          <div class="card-value">98,700</div>
+          <div class="card-subtext">
+            <span class="trend up"><span class="material-icons">arrow_upward</span>+1.8% from last week</span>
+          </div>
+        </div>
+        <div class="card card-top-product">
+          <div class="card-title">Top Performing Product</div>
+          <div class="card-value">Echo Dot (4th Gen)</div>
+          <div class="card-subtext">Sales: 12,500</div>
+        </div>
+      </section>
+
+      <!-- Charts Section -->
+      <section class="charts-section">
+        <div class="chart-card">
+          <div class="chart-title">Monthly Revenue</div>
+          <canvas id="lineChart"></canvas>
+        </div>
+        <div class="chart-card">
+          <div class="chart-title">Category Sales</div>
+          <canvas id="pieChart"></canvas>
+        </div>
+        <div class="chart-card">
+          <div class="chart-title">Inventory Levels</div>
+          <canvas id="barChart"></canvas>
+        </div>
+      </section>
+
+      <!-- Recent Orders Table -->
+      <section class="table-section">
+        <div class="table-title">Recent Orders</div>
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Product</th>
+                <th>Customer</th>
+                <th>Date</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="ordersTableBody">
+              <!-- Populated by JS -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
