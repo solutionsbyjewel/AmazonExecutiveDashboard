@@ -1,1 +1,0 @@
-import { revenueData, categoryData, inventoryData } from './data.js'; export function renderCharts() { ... }
