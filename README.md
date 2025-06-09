@@ -1,0 +1,1 @@
+This is a fully responsive, front-end mock executive dashboard for Amazon, built using HTML, CSS, and vanilla JavaScript. It showcases key business metrics such as sales, orders, inventory levels, and customer engagement using dynamic charts and interactive widgets. Designed for portfolio and UI/UX prototyping purposes.
