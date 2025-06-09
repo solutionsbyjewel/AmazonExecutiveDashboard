@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luxury Amazon Executive Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="header">
+    <h1>Amazon Executive</h1>
+    <div class="user-info">
+      <img src="assets/avatar.png" alt="Exec Avatar" />
+      <span>Jeff Bezos</span>
+    </div>
+  </header>
+  <aside class="sidebar">
+    <nav>
+      <ul>
+        <li class="active">Dashboard</li>
+        <li>Sales</li>
+        <li>Customers</li>
+        <li>Inventory</li>
+        <li>Reports</li>
+      </ul>
+    </nav>
+  </aside>
+  <main>
+    <section class="kpis">
+      <div class="card">Revenue<br><strong>$12.8M</strong></div>
+      <div class="card">Orders<br><strong>52,390</strong></div>
+      <div class="card">New Customers<br><strong>1,204</strong></div>
+      <div class="card">Returns<br><strong>312</strong></div>
+    </section>
+    <section class="charts">
+      <canvas id="salesChart"></canvas>
+    </section>
+  </main>
+  <script src="js/chart-config.js" type="module"></script>
+</body>
+</html>
