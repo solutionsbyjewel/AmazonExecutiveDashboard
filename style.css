@@ -1,0 +1,117 @@
+:root {
+  --primary: #ff9900;
+  --accent: #00cc99;
+  --white: #ffffff;
+  --dark-bg: #0e1111;
+  --card-bg: #1f1f1f;
+  --gold: #ffd700;
+  --shadow: 0 6px 24px rgba(0,0,0,0.18);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #0e1111 0%, #1f1f1f 100%);
+  font-family: 'Segoe UI', 'Inter', 'Roboto', Arial, sans-serif;
+  color: var(--white);
+  min-height: 100vh;
+}
+
+.dashboard-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem 1.2rem 1rem;
+  background: var(--dark-bg);
+}
+
+.avatar {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  border: 3px solid var(--primary);
+  margin-bottom: 0.7rem;
+  box-shadow: 0 0 0 4px var(--card-bg);
+  object-fit: cover;
+  background: var(--card-bg);
+}
+
+.dashboard-header h1 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--primary);
+  margin: 0;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.3);
+}
+
+.dashboard-main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 1rem;
+}
+
+.dashboard-card {
+  background: var(--card-bg);
+  border-radius: 1.1rem;
+  box-shadow: var(--shadow);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  min-width: 320px;
+  max-width: 420px;
+  flex: 1 1 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.15s, box-shadow 0.15s;
+  border-top: 4px solid var(--primary);
+}
+
+.dashboard-card:hover {
+  transform: translateY(-6px) scale(1.025);
+  box-shadow: 0 10px 36px 0 rgba(255,153,0,0.09), var(--shadow);
+}
+
+.dashboard-card h2 {
+  color: var(--gold);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.01em;
+}
+
+canvas {
+  width: 100% !important;
+  max-width: 350px;
+  height: 220px !important;
+  background: transparent;
+}
+
+@media (max-width: 900px) {
+  .dashboard-main {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.2rem 0.5rem;
+  }
+  .dashboard-card {
+    max-width: 98vw;
+    min-width: 0;
+    width: 100%;
+  }
+  .dashboard-header h1 {
+    font-size: 1.5rem;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: var(--card-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 6px;
+}
