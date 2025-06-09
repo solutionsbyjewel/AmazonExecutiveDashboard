@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amazon Executive Dashboard</title>
+  <link rel="stylesheet" href="style/style.css">
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="dashboard-header">
+    <img src="assets/avatar.png" alt="Executive Avatar" class="avatar">
+    <h1>Amazon Executive Dashboard</h1>
+  </header>
+  <main class="dashboard-main">
+    <section class="dashboard-card">
+      <h2>Sales Overview</h2>
+      <canvas id="salesChart" aria-label="Sales Overview Bar Chart"></canvas>
+    </section>
+    <section class="dashboard-card">
+      <h2>Customer Growth</h2>
+      <canvas id="growthChart" aria-label="Customer Growth Line Chart"></canvas>
+    </section>
+  </main>
+  <script src="js/chart-config.js"></script>
+</body>
+</html>
