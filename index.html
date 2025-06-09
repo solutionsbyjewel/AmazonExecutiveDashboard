@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Amazon Executive Dashboard</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<header>
+  <h1>Amazon Executive Dashboard</h1>
+  <div class="user-info">
+    <img src="https://via.placeholder.com/40" alt="User avatar"/>
+    <span>Jeff Bezos</span>
+  </div>
+</header>
+<aside>
+  <nav>
+    <ul>
+      <li>Dashboard</li><li>Sales</li><li>Orders</li><li>Inventory</li>
+      <li>Customers</li><li>Reports</li><li>Settings</li>
+    </ul>
+  </nav>
+</aside>
+<main>
+  <section class="kpi-cards"></section>
+  <section class="charts">
+    <canvas id="chartRevenue" aria-label="Monthly Revenue"></canvas>
+    <canvas id="chartCategories"></canvas>
+    <canvas id="chartInventory"></canvas>
+  </section>
+  <section class="orders">
+    <input type="text" id="orderSearch" placeholder="Search orders..." />
+    <table><thead><tr><th>ID</th><th>Product</th><th>Customer</th><th>Date</th><th>Status</th></tr></thead><tbody></tbody></table>
+  </section>
+</main>
+
+<script src="js/data.js" type="module"></script>
+<script src="js/charts.js" type="module"></script>
+<script src="js/main.js" type="module"></script>
+</body>
+</html>
